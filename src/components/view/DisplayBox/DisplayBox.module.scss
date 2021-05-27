@@ -1,0 +1,97 @@
+@import '../../../settings.scss';
+
+section {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	padding: 30px 15px;
+
+	.displayWrapper {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+
+		h3 {
+			color: #fff;
+			margin-bottom: 7px;
+		}
+
+		.display {
+			width: 180px;
+			height: 180px;
+			border-radius: 10px;
+			display: grid;
+			place-items: center;
+			margin-bottom: 50px;
+			background-color: $secondary-color;
+
+			span {
+				font-size: 100px;
+				color: $health-bar-color;
+			}
+		}
+
+		.correct {
+			@extend .display;
+			border: none;
+			background-color: inherit;
+		}
+
+		.icon {
+			font-size: 100px;
+			color: $health-bar-color;
+		}
+		.icon_bad {
+			@extend .icon;
+			color: $error-color;
+		}
+	}
+
+	.btnWrapper {
+		width: 60%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 20px 20px;
+		grid-template-areas:
+			'. . . . . '
+			'. . . . . ';
+
+		@media (max-width: 767px) {
+			width: 100%;
+			gap: 15px 15px;
+		}
+
+		button {
+			position: relative;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background-color: grey;
+			display: grid;
+			place-items: center;
+			outline-style: solid;
+			outline-color: transparent;
+			text-decoration: none;
+			border: none;
+			cursor: pointer;
+
+			@media (max-width: 767px) {
+				width: 45px;
+				height: 45px;
+			}
+
+			span {
+				font-size: 40px;
+				color: #ffffff;
+
+				@media (max-width: 767px) {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}

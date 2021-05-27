@@ -1,0 +1,42 @@
+@import '../../../settings.scss';
+
+.wrapper {
+	width: 90%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 15px;
+
+	.icon {
+		font-size: 20px;
+		color: $error-color;
+		margin-right: 12px;
+	}
+
+	.bar3 {
+		width: 200px;
+		height: 15px;
+		border-radius: 50px;
+		border: 1px solid #ffffff;
+		background: $health-bar-color;
+		background: linear-gradient(90deg, $health-bar-color 100%);
+		transition: all 0.5s ease;
+	}
+	.bar0 {
+		@extend .bar3;
+		background: linear-gradient(90deg, $health-bar-color 0%, transparent 0%);
+		transition: all 0.5s ease;
+	}
+
+	.bar2 {
+		@extend .bar3;
+		background: linear-gradient(90deg, $health-bar-color 66%, transparent 66%);
+		transition: all 0.5s ease;
+	}
+
+	.bar1 {
+		@extend .bar3;
+		background: linear-gradient(90deg, $health-bar-color 33%, transparent 33%);
+		transition: all 0.5s ease;
+	}
+}

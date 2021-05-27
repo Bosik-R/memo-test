@@ -1,0 +1,37 @@
+@import '../../../settings.scss';
+
+.stats {
+	width: 180px;
+	height: 180px;
+	border: none;
+	border-radius: 50%;
+	background-color: $secondary-color;
+	color: $text-color;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	margin: 15px;
+
+	@media (max-width: 767px) {
+		width: 100px;
+		height: 100px;
+	}
+
+	h4 {
+		font-size: 30px;
+
+		@media (max-width: 767px) {
+			font-size: 20px;
+		}
+	}
+
+	h2 {
+		font-size: 60px;
+
+		@media (max-width: 767px) {
+			font-size: 40px;
+		}
+	}
+}
